@@ -4,8 +4,8 @@
  * Si quiere hacer un argumento posicional opcional lo encierro entre [];
  */
 
-void saludar( String mensaje, [String nombre = '<insertar nombre>', int edad = 20] ) {
-  print('$mensaje $nombre $edad');
+void saludar( String mensaje, [String nombre = '<insertar nombre>', int? edad] ) {
+  print('Saludar 1: $mensaje $nombre $edad');
 }
 
 
@@ -14,7 +14,7 @@ void saludar( String mensaje, [String nombre = '<insertar nombre>', int edad = 2
  * required obliga a que ese argumento sea obligatorio
  */
 
-void saludar2( String mensaje, {required String nombre, int veces = 10}) {
+void saludar2( String mensaje, {required String nombre, int veces = 23}) {
   print('Saludar2: $mensaje $nombre - $veces');
 
 }
@@ -23,7 +23,7 @@ void saludar2( String mensaje, {required String nombre, int veces = 10}) {
 main(List<String> args) {
 
 
-  saludar('hola', 'marco', 42);
+  saludar('Mensaje para', 'Willyto');
 
   saludar2('saludos', nombre: 'Tony');
 

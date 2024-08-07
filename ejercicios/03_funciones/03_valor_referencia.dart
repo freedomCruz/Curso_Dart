@@ -11,12 +11,22 @@ String capitalizar( String texto) {
   return texto;
 }
 
+List<String> capitalizarLista( List<String> lista) {
+  lista = [...lista].map((e) => e.toUpperCase()).toList();
+  lista.forEach((element) => print('$element: ${element.length}'));
+  return lista;
+}
+
 Map<String, String> capitalizarMap(Map<String, String> mapa) {
 
-  
-  mapa = { ...mapa};//Romper la referencia 
+  //Romper la referencia 
+  // return { ...mapa}.map((key, value){
 
-  mapa['nombre'] = mapa['nombre']?.toUpperCase() ?? 'No hay nombre';
+  //   return MapEntry(key, value.toUpperCase());
+  // });
+  mapa = {...mapa};
+
+  mapa['nombre'] = mapa['nombre']?.toUpperCase() ?? 'No hay nombre'; //Para un key especifico.
   return mapa;
 }
 
@@ -27,11 +37,15 @@ main(List<String> args) {
 
   // print(nombre);
   // print(nombre2);
+  List<String> list = ['Goku', 'Vegeta', 'Trunks'];
+  List<String> list2 = capitalizarLista(list);
 
-  
+  print(list);
+  print(list2);
 
 Map<String, String> persona = {
   'nombre': 'Tony Stark',
+  'poder': 'Inteligencia'
 };
 
 Map<String, String> persona2 = capitalizarMap(persona);

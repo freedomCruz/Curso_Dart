@@ -21,8 +21,8 @@ class Cliente extends Persona {
 
 main(List<String> args) {
 
-  final maria = new Cliente( 33, 'María');
+  final customer = new Cliente( 33, 'María');
 
-  maria.imprimirNombre();
+  customer.imprimirNombre();
   
 }

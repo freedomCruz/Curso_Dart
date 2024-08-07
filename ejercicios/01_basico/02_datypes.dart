@@ -60,7 +60,7 @@ main () {
   villanos2.add('Duende Verde');
   villanos2.add('Duende Verde');
   villanos2.add('Duende Verde');
-  // print(villanos2);
+  print(villanos2);
 
   // ====== Maps                   Diccionarios / Objetos literales en otros lenguajes de programación.
 
@@ -70,7 +70,7 @@ main () {
     3: 35,
   };
 
-  // print(ironman['edad']);
+  print(ironman[3]);
 
   Map<String, dynamic> capitan = new Map();
 
